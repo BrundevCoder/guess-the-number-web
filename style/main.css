@@ -1,0 +1,112 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: #f3f1f1;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 3px solid #216b21;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.active {
+  display: flex;
+}
+
+#start-btn {
+  margin-top: 1rem;
+  padding: 1rem 0.5rem;
+  background: #4db94d;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#startScreen h1 {
+  background: linear-gradient(
+    135deg,
+    #268d26, #00ff00
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px #51a12b;
+}
+
+#startScreen p {
+  margin-top: 10px;
+}
+
+#sendGuessBtn {
+  background: #4db94d;
+  padding: 1.2rem 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin: 15px 0;
+  color: #fff;
+}
+
+button {
+  transition: 200ms ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+#userInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 1.25rem;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  outline: none;
+  border-radius: 12px;
+  border: 1px solid green;
+}
+
+#userInput:focus {
+  border: 1px solid rgb(0, 255, 0);
+}
+
+.win-txt {
+  color: rgb(143, 145, 21);
+  text-shadow: 0 0 10px rgb(178, 180, 30);
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+#refresh-btn {
+  font-size: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #268d26;
+  color: #fff;
+  margin: 15px 0;
+}
