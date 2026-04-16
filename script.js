@@ -43,7 +43,7 @@ function handleWin() {
 
 function handleGame() {
 
-  getUserInput()
+  getUserInput();
 
   if (guess < secretNumber) {
     message.innerText = `The number is bigger than ${guess}`;
