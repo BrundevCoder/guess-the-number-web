@@ -18,13 +18,16 @@
   <div id="mainScreen" class="screen">
     <h1 id="message">Try guess a number first!</h1>
 
-    <input id="userInput" type="number" min="0" max="100" placeholder="Type your guess here...">
+    <input id="userInput" type="number" min="0" max="100" placeholder="Type your guess">
     <button id="sendGuessBtn">Try!</button>
+    <p id="triesDisplay">Tries: 0</p>
   </div>
 
+  <!-- Win screen -->
   <div id="winScreen" class="screen">
     <h1 class="win-txt">You Win!</h1>
     <p id="final-message">Congrats! You guess it Correctly!</p>
+    <p id="endTries">Tries: 0</p>
 
     <button id="refresh-btn">Restart</button>
   </div>
