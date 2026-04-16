@@ -8,10 +8,13 @@ const message = document.getElementById("message");
 const userInput = document.getElementById("userInput");
 const inputButton = document.getElementById("sendGuessBtn");
 const restartButton = document.getElementById("refresh-btn");
+const firstTriesDisplay = document.getElementById("triesDisplay");
+const finalEndTries = document.getElementById("endTries");
 
 let guess;
 let win = false;
 let secretNumber;
+let tries = 0;
 
 // functions
 
@@ -44,11 +47,20 @@ function handleGame() {
 
   if (guess < secretNumber) {
     message.innerText = `The number is bigger than ${guess}`;
+    tries++;
+    firstTriesDisplay.innerText = `Tries: ${tries}`;
+    finalEndTries.innerHTML = `Tries: ${tries}`;
   }
   else if (guess > secretNumber) {
     message.innerText = `The number is lower than ${guess}`;
+    tries++;
+    firstTriesDisplay.innerText = `Tries: ${tries}`;
+    finalEndTries.innerHTML = `Tries: ${tries}`;
   }
   else {
+    tries++;
+    firstTriesDisplay.innerText = `Tries: ${tries}`;
+    finalEndTries.innerHTML = `Tries: ${tries}`;
     // win
     win = true;
     handleWin();
@@ -58,6 +70,11 @@ function handleGame() {
 // connect buttons
 startButton.addEventListener("click", startGame);
 inputButton.addEventListener("click", handleGame);
+userInput.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    handleGame();
+  }
+});
 restartButton.addEventListener("click", () => {
   location.reload();
 })
