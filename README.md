@@ -6,7 +6,7 @@ First you click on the start Button, then the website prompts you to you try to 
 ## Design
 I tried to improve the design, such as by adding a new font and changing some other elements, like the new green background 🟢 and also changing the color of other things.
 
-## Why did i Created?
+## Why did I create this??
 Well, i created because i was trying to manipulate the DOM of the webpage, i enjoy trying someting new. I'm liking to go ahead with this project
 
 # key:
