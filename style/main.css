@@ -1,12 +1,19 @@
+/* GOOGLE FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+
+/* RESET */
+
 * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  font-family: "Bitcount Grid Double", Arial;
 }
 
 body {
-  background: #ccc;
+  background: #8ebb6f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +27,8 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background: #f3f1f1;
+  background: #ffffff27;
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 1.25rem;
   border: 3px solid #216b21;
@@ -43,17 +51,13 @@ body {
 }
 
 #startScreen h1 {
-  background: linear-gradient(
-    135deg,
-    #268d26, #00ff00
-  );
-  color: transparent;
-  background-clip: text;
-  -webkit-text-stroke: 0.5px #51a12b;
+  color: #ffffff;
+  font-family: "Bitcount Grid Double", Arial;
 }
 
 #startScreen p {
   margin-top: 10px;
+  color: #f3fde9;
 }
 
 #sendGuessBtn {
@@ -95,8 +99,8 @@ button:active {
 }
 
 .win-txt {
-  color: rgb(143, 145, 21);
-  text-shadow: 0 0 10px rgb(178, 180, 30);
+  color: #ffee00;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-weight: bold;
   font-size: 4rem;
 }
@@ -109,4 +113,11 @@ button:active {
   background-color: #268d26;
   color: #fff;
   margin: 15px 0;
+}
+
+#endTries,
+#triesDisplay {
+  font-family: "Sekuya", Arial;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
