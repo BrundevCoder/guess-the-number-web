@@ -8,27 +8,64 @@
 </head>
 <body>
 
-  <div id="startScreen" class="screen active">
+  <div id="modeScreen" class="screen active">
     <h1>Guess The Number Game!</h1>
-    <p>Guess a number between 0-100</p>
+    <p>Choose a difficulty</p>
+
+    <div class="btn-container">
+      <button class="modeButton" id="easyBtn">Easy</button>
+      <button class="modeButton" id="mediumBtn">Medium</button>
+      <button class="modeButton" id="hardBtn">Hard</button>
+    </div>
+
+    <button id="seeDetails" class="info-btn">?</button>
+
+    <div id="detailsDrop" class="details">
+      <p class="info">
+        <span class="easy">Easy:</span> A random number between 0 and 50!
+      </p>
+      <p class="info">
+        <span class="medium">Medium:</span> A random number between 0 and 100!
+      </p>
+      <p class="info">
+        <span class="hard">Hard:</span> A random number between 0 and 500!
+      </p>
+    </div>
+
+  </div>
+
+  <div id="startScreen" class="screen">
+    <h1>Guess The Number Game!</h1>
+    <h2>You chose: <span id="modeDisplay">None</span> </h2>
+    <p>Guess a number between 0-<span id="maxNumber">0</span></p>
 
     <button id="start-btn">Click Here To Start!</button>
   </div>
 
   <div id="mainScreen" class="screen">
     <h1 id="message">Try guess a number first!</h1>
+    <p id="secretButton" class="secret"> <span id="livesDisplay">0</span> Lives left! </p>
+    <p class="hidden" id="secretDisplay"> You won +15 lives! </p>
 
-    <input id="userInput" type="number" min="0" max="100" placeholder="Type your guess here...">
+    <input id="userInput" type="number" min="0" max="100" placeholder="Type your guess">
     <button id="sendGuessBtn">Try!</button>
+    <p id="triesDisplay">Tries: 0</p>
   </div>
 
+  <!-- Win screen -->
   <div id="winScreen" class="screen">
     <h1 class="win-txt">You Win!</h1>
     <p id="final-message">Congrats! You guess it Correctly!</p>
+    <p id="endTries">Tries: 0</p>
 
     <button id="refresh-btn">Restart</button>
   </div>
   
+  <div id="lostScreen" class="screen">
+    <h1 class="lose">You lost!</h1>
+
+    <button class="restart-btn" id="refresh-btn2">Restart</button>
+  </div>
 
   <script src="script.js"></script>
 </body>

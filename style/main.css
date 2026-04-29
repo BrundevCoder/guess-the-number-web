@@ -1,12 +1,19 @@
+/* GOOGLE FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+
+/* RESET */
+
 * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  font-family: "Bitcount Grid Double", Arial;
 }
 
 body {
-  background: #ccc;
+  background: #8ebb6f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +27,8 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background: #f3f1f1;
+  background: #ffffff27;
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 1.25rem;
   border: 3px solid #216b21;
@@ -42,18 +50,16 @@ body {
   font-weight: bold;
 }
 
+#modeScreen h1,
 #startScreen h1 {
-  background: linear-gradient(
-    135deg,
-    #268d26, #00ff00
-  );
-  color: transparent;
-  background-clip: text;
-  -webkit-text-stroke: 0.5px #51a12b;
+  color: #ffffff;
+  font-family: "Bitcount Grid Double", Arial;
 }
 
+#modeScreen p,
 #startScreen p {
   margin-top: 10px;
+  color: #f3fde9;
 }
 
 #sendGuessBtn {
@@ -95,12 +101,13 @@ button:active {
 }
 
 .win-txt {
-  color: rgb(143, 145, 21);
-  text-shadow: 0 0 10px rgb(178, 180, 30);
+  color: #ffee00;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-weight: bold;
   font-size: 4rem;
 }
 
+.restart-btn,
 #refresh-btn {
   font-size: 1.5rem;
   padding: 1.25rem 1.75rem;
@@ -109,4 +116,120 @@ button:active {
   background-color: #268d26;
   color: #fff;
   margin: 15px 0;
+}
+
+#endTries,
+#triesDisplay {
+  font-family: "Sekuya", Arial;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.modeButton {
+  color: #fff;
+  border: 3px solid transparent;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.modeButton:nth-child(1) {
+  background: #216b21;
+}
+
+.modeButton:nth-child(2) {
+  background: #c4b424;
+}
+
+.modeButton:nth-child(3) {
+  background: #d81818;
+}
+
+.info-btn {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #1167a0;
+  background: #219bec;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.details {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.info {
+  text-align: justify;
+  font-size: 1.15rem;
+}
+
+.visible {
+  display: grid;
+}
+
+.easy {
+  color: #216b21;
+  font-weight: bold;
+}
+
+.medium {
+  color: #ffe923;
+  font-weight: bold;
+}
+
+.hard {
+  color: #d81818;
+  font-weight: bold;
+}
+
+.lose {
+  color: #d33434;
+}
+
+.secret {
+  cursor: pointer;
+  user-select: none;
+}
+
+.secret:active {
+  animation: click 200ms ease forwards;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* REPONSIVE */
+
+@media (max-width: 500px) {
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .info {
+    font-size: 0.9rem;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes click {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(10px);}
 }
