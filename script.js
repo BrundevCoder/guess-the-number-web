@@ -74,6 +74,9 @@ function handleMode(modeType) {
   mode === "hard" ? max = modeMaxInfo["hard"] : max = max;
 
   lives = ( modeMaxInfo[mode] / 10 ) * 2
+  if ( mode === "hard" ) {
+    lives = 20;
+  }
 
   modeDisplay.innerText = mode.charAt(0).toUpperCase() + mode.slice(1);
 
